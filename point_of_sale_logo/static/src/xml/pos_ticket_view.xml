@@ -151,13 +151,11 @@
                         </td></tr>
                 </table>
                 <!-- Footer -->
-               <t t-if="receipt.footer_xml">
-                   <t t-raw='receipt.footer_xml' />
-                </t>
-                <t t-if='!receipt.footer_xml and receipt.footer'>
+                <t t-if="receipt.footer">
+                    <div style='text-align:center'>
+                        <t t-esc="receipt.footer" />
+                    </div>
                     <br/>
-                    <t t-esc='receipt.footer' />
-                </t>
                 </t>
             </div>
         </t>

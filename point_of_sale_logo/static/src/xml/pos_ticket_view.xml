@@ -145,12 +145,18 @@
                         </td></tr>
                 </table>
                 <!-- Footer -->
-               <t t-if="receipt.header">
+                <t t-if="receipt.footer">
+                    <div style='text-align:center'>
+                        <t t-esc="receipt.footer" />
+                    </div>
+                    <br/>
+                </t>
+               <!--<t t-if="receipt.header">
                     <div style='text-align:center'>
                         <t t-esc="receipt.header" />
                     </div>
                     <br/>
-                </t>
+                </t>-->
 
             </div>
         </t>

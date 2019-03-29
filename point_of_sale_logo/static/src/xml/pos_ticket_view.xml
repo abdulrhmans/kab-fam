@@ -149,14 +149,15 @@
                         <td style='text-align:right'>
                         <t t-esc="widget.format_currency(order.get_change())"/>
                         </td></tr>
-                </table>
-                <!-- Footer -->
-                <t t-if="receipt.footer">
+                     <!-- Footer -->
+                    <t t-if="receipt.footer">
                     <div style='text-align:center'>
                         <t t-esc="receipt.footer" />
                     </div>
                     <br/>
                 </t>
+                </table>
+               
             </div>
         </t>
     </t>

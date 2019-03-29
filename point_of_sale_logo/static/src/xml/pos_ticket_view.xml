@@ -150,9 +150,10 @@
                         <t t-esc="widget.format_currency(order.get_change())"/>
                         </td></tr>
                 </table>
-               <t t-if="receipt_footer">
+               <t t-if="receipt.footer">
                    <div style='text-align:center'>
-                       <t t-esc="receipt_footer" />
+                       <barcode encoding="CODE39"><t t-esc="receipt.coupon_code /></barcode>
+                       <t t-esc="receipt.footer" />
                    </div>
                 </t>
             </div>

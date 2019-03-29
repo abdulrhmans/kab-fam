@@ -150,9 +150,10 @@
                         <t t-esc="widget.format_currency(order.get_change())"/>
                         </td></tr>
                      <!-- Footer -->
-                    <t t-if="receipt.footer">
+                    <!--<t t-if="receipt.footer"> -->
                     <div style='text-align:center'>
-                        <t t-esc="receipt.footer" />
+                        12 Months Warranty </br>
+                    Monies paid are non- refundable </br>
                     </div>
                     <br/>
                 </t>

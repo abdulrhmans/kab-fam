@@ -150,11 +150,14 @@
                         <t t-esc="widget.format_currency(order.get_change())"/>
                         </td></tr>
                 </table>
-               <t t-if="receipt.footer">
-                   <div style='text-align:center'>
-                       <barcode encoding="CODE39"><t t-esc="receipt.coupon_code /></barcode>
-                       <t t-esc="receipt.footer" />
-                   </div>
+                <!-- Footer -->
+               <t t-if="receipt.footer_xml">
+                   <t t-raw='receipt.footer_xml' />
+                </t>
+                <t t-if='!receipt.footer_xml and receipt.footer'>
+                    <br/>
+                    <t t-esc='receipt.footer' />
+                </t>
                 </t>
             </div>
         </t>

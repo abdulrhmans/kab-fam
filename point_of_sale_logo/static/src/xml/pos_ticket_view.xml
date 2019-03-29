@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <templates id="point_of_sale.template" xml:space="preserve">
     <t t-extend="PosTicket">
         <t t-jquery='.pos-sale-ticket' t-operation='replace'>
@@ -30,7 +30,7 @@
                 <t t-if="widget.pos.company.email">
                     <div style="width:100%;text-align:right;"><t t-esc="widget.pos.company.email"/></div>
                 </t>
-                
+                <br />
                 <table class='receipt-orderlines'>
                     <colgroup>
                         <col width='40%' />
@@ -142,16 +142,16 @@
                           </td>
                         <td style='text-align:right'>
                         <t t-esc="widget.format_currency(order.get_change())"/>
-                        </td>
-                    </tr>
+                        </td></tr>
                 </table>
-                <br />
-                <t t-if="receipt.header">
+                <!-- Footer -->
+               <t t-if="receipt.header">
                     <div style='text-align:center'>
                         <t t-esc="receipt.header" />
                     </div>
                     <br/>
                 </t>
+
             </div>
         </t>
     </t>

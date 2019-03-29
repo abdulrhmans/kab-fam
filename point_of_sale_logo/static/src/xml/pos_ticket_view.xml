@@ -30,13 +30,7 @@
                 <t t-if="widget.pos.company.email">
                     <div style="width:100%;text-align:right;"><t t-esc="widget.pos.company.email"/></div>
                 </t>
-                <br />
-                <t t-if="receipt.header">
-                    <div style='text-align:center'>
-                        <t t-esc="receipt.header" />
-                    </div>
-                    <br/>
-                </t>
+                
                 <table class='receipt-orderlines'>
                     <colgroup>
                         <col width='40%' />
@@ -148,17 +142,16 @@
                           </td>
                         <td style='text-align:right'>
                         <t t-esc="widget.format_currency(order.get_change())"/>
-                        </td></tr>
-                     <!-- Footer -->
-                    <!--<t t-if="receipt.footer"> -->
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <t t-if="receipt.header">
                     <div style='text-align:center'>
-                        12 Months Warranty </br>
-                    Monies paid are non- refundable </br>
+                        <t t-esc="receipt.header" />
                     </div>
                     <br/>
                 </t>
-                </table>
-               
             </div>
         </t>
     </t>
